@@ -1,0 +1,140 @@
+/* =======================================
+ * ESTILOS GLOBALES Y RESET BÁSICO
+ * ======================================= */
+
+/* Establece el modelo de caja border-box para facilitar el diseño */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo para el cuerpo de la página */
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Tipografía legible */
+    line-height: 1.6; /* Espaciado entre líneas para mejor lectura */
+    background-color: #f4f4f9; /* Fondo muy claro */
+    color: #333; /* Color de texto oscuro */
+    min-height: 100vh; /* Asegura que el body ocupe al menos toda la altura de la vista */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Contenedor principal para el contenido */
+main {
+    padding: 20px;
+    flex-grow: 1; /* Permite que el main ocupe el espacio restante */
+    max-width: 960px; /* Ancho máximo para el contenido principal */
+    width: 90%; /* Ancho flexible */
+    margin: 0 auto; /* Centrar el contenido */
+}
+
+/* Estilo para todos los títulos (h1, h2, etc.) */
+h1, h2 {
+    color: #2c3e50; /* Un color oscuro y serio */
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 1.8em;
+}
+
+/* Estilo para todos los párrafos */
+p {
+    margin-bottom: 20px;
+}
+
+/* =======================================
+ * HEADER (CABECERA)
+ * ======================================= */
+header {
+    background-color: #3498db; /* Un azul vibrante */
+    color: white; /* Texto blanco para contraste */
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+header p {
+    font-size: 1.1em;
+    font-style: italic;
+    color: #ecf0f1; /* Gris claro para el subtítulo */
+    margin-bottom: 0;
+}
+
+/* =======================================
+ * NAV (NAVEGACIÓN)
+ * ======================================= */
+nav {
+    background-color: #2c3e50; /* Azul oscuro para la barra */
+    padding: 10px 0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+    list-style: none; /* Eliminar viñetas */
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block; /* Elementos de la lista en línea */
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none; /* Quitar el subrayado de los enlaces */
+    color: white;
+    padding: 8px 15px;
+    display: block;
+    transition: background-color 0.3s ease; /* Transición suave para el hover */
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: #34495e; /* Un tono más oscuro al pasar el ratón */
+    color: #ecf0f1;
+}
+
+/* =======================================
+ * MAIN & SECTION
+ * ======================================= */
+section {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 30px; /* Separación del nav */
+}
+
+/* =======================================
+ * FOOTER (PIE DE PÁGINA)
+ * ======================================= */
+footer {
+    background-color: #7f8c8d; /* Gris medio */
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: auto; /* Empuja el footer a la parte inferior de la vista */
+    font-size: 0.9em;
+}
+
+footer p {
+    margin: 0;
+}
+/*foto*/
+
+    /* 1. Dimensiones */
+    width: 200px; /* Tamaño fijo, ideal para una foto de perfil */
+    height: 200px; 
+    
+    /* 2. Diseño Estético (opcional) */
+    border-radius: 50%; /* La hace completamente redonda */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+    border: 5px solid #3498db; /* Un borde para destacarla, usando el color de tu header */
+    display: block; 
+    margin: 20px auto; /* Centra la imagen horizontalmente */
+}
