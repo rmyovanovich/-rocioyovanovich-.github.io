@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+</head>
+<body>
+    <header>
+        <h1>Contacto</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="acercade.html">Acerca de</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="form-container">
+            <h1>Formulario de Registro</h1>
+            <form action="/submit-form" method="post">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" maxlength="20" required>
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido" maxlength="20">
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="Ej: 11-1234-5678" onfocus="this.placeholder=''" onblur="this.placeholder='Ej: 11-1234-5678'">
+                
+                <label for="edad">Edad (16 - 120):</label>
+                <input type="number" id="edad" name="edad" min="16" max="120">
+                
+                <label for="direccion">Dirección:</label>
+                <textarea id="direccion" name="direccion" rows="3"></textarea>
+                
+                <label for="provincia">Provincia:</label>
+                <input type="text" id="provincia" name="provincia" list="provincias-patagonicas">
+                <datalist id="provincias-patagonicas">
+                    <option value="Neuquén">
+                    <option value="Río Negro">
+                    <option value="Chubut">
+                    <option value="Santa Cruz">
+                    <option value="Tierra del Fuego">
+                </datalist>
+                
+                    <label for="cp">Código Postal (Ej: A1234ABC):</label>
+                    <input type="text" id="cp" name="cp" pattern="[A-Z]\d{4}[A-Z]{3}" title="Debe seguir el formato: Una letra mayúscula, 4 dígitos, 3 letras mayúsculas (Ej: A1234ABC)">
+                
+                    <label>Método de Contacto Preferido:</label>
+                    <div>
+                    <input type="radio" id="contacto-email" name="contacto-pref" value="email" checked>
+                    <label for="contacto-email" style="display: inline; font-weight: normal;">Correo Electrónico</label><br>
+
+                    <input type="radio" id="contacto-postal" name="contacto-pref" value="postal">
+                    <label for="contacto-postal" style="display: inline; font-weight: normal;">Correo Postal</label><br>
+
+                    <input type="radio" id="contacto-tel" name="contacto-pref" value="telefono">
+                    <label for="contacto-tel" style="display: inline; font-weight: normal;">Teléfono</label>
+                </div>
+
+                <label>Tipo de Suscripción (Puede elegir más de una):</label>
+                <div>
+                    <input type="checkbox" id="susc-noticias" name="suscripcion" value="noticias">
+                    <label for="susc-noticias" style="display: inline; font-weight: normal;">Noticias</label><br>
+
+                    <input type="checkbox" id="susc-promo" name="suscripcion" value="promociones">
+                    <label for="susc-promo" style="display: inline; font-weight: normal;">Promociones</label><br>
+
+                    <input type="checkbox" id="susc-alertas" name="suscripcion" value="alertas" checked>
+                    <label for="susc-alertas" style="display: inline; font-weight: normal;">Alertas</label><br>
+    
+                    <input type="checkbox" id="susc-eventos" name="suscripcion" value="eventos">
+                    <label for="susc-eventos" style="display: inline; font-weight: normal;">Eventos</label>
+                </div>
+
+                <input type="submit" value="Cargar">
+            </form>
+        </div>
+
+        <h2>Resumen de Datos</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Campo</th>
+                    <th>Valor Ingresado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Nombre</td><td></td></tr>
+                <tr><td>Apellido</td><td></td></tr>
+                <tr><td>Email</td><td></td></tr>
+                <tr><td>Teléfono</td><td></td></tr>
+                <tr><td>Edad</td><td></td></tr>
+                <tr><td>Dirección</td><td></td></tr>
+                <tr><td>Provincia</td><td></td></tr>
+                <tr><td>Código Postal</td><td></td></tr>
+                <tr><td>Método Preferido de Contacto</td><td></td></tr>
+                <tr><td>Tipo de Suscripción</td><td></td></tr>
+            </tbody>
+        </table>
+    </main>
+
+    </body>
+</html>
